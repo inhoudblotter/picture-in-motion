@@ -1,0 +1,58 @@
+.container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.action {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.like svg path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.like svg path:nth-child(2) {
+  fill: var(--grey-66);
+}
+
+.like.liked path:nth-child(2) {
+  fill: #ff5f5f;
+}
+
+.like:focus {
+  outline: none;
+}
+
+.like:focus-visible svg path:first-child {
+  fill: var(--accent);
+}
+
+.save svg path {
+  transition:
+    stroke 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.save:focus {
+  outline: none;
+}
+
+.save:focus-visible svg path:first-child {
+  stroke: var(--accent);
+}
+
+@media (hover: hover) {
+  .like:hover svg path:first-child {
+    fill: var(--accent);
+  }
+  .save:hover svg path:nth-child(2) {
+    transform: translateY(2px);
+  }
+  .save:hover svg path:first-child {
+    stroke: var(--accent);
+  }
+}

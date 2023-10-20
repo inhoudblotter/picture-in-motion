@@ -1,0 +1,25 @@
+.container {
+  padding: 15px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.tape {
+  display: flex;
+  justify-content: center;
+}
+.loader {
+  margin: 30px auto;
+}
+.end {
+  display: block;
+  margin: 30px auto;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 15px 10px;
+  }
+}

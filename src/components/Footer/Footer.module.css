@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 15px;
+  background-color: var(--grey-44);
+}
+
+.thanks {
+  font-size: small;
+  font-style: oblique;
+  color: var(--white);
+}
+
+.thanks a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+}

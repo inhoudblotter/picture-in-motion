@@ -1,0 +1,20 @@
+.el {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--grey-88);
+  background-color: var(--grey-66);
+  transition:
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+.el:focus {
+  outline: none;
+  background-color: var(--grey-88);
+}
+
+@media (hover: hover) {
+  .el:hover {
+    border-color: aqua;
+  }
+}

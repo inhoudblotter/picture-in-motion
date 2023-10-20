@@ -1,0 +1,25 @@
+.link {
+  display: flex;
+  align-items: center;
+}
+.link .icon path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible .icon path:first-child {
+  fill: var(--accent);
+}
+
+.active .icon path:nth-child(2) {
+  fill: #ff5f5f;
+}
+
+@media (hover: hover) {
+  .link:hover .icon path:first-child {
+    fill: var(--accent);
+  }
+}

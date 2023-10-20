@@ -1,0 +1,65 @@
+.container {
+  margin: 30px auto;
+  max-width: 300px;
+}
+
+.imgContainer {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.title,
+.date,
+.username,
+.avatar {
+  color: var(--white);
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.date {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.username {
+  margin: 0;
+  font-size: 1.6em;
+}
+
+.avatar {
+  margin-left: 15px;
+  border-radius: 100%;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 1.5em;
+  }
+  .date {
+    font-size: 0.8em;
+  }
+  .username {
+    font-size: 1.2em;
+  }
+}

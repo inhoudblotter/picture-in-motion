@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.error {
+  background-color: rgba(236, 57, 52, 0.7);
+}
+
+.message {
+  margin-right: 10px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.close {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.close svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--white);
+}

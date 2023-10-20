@@ -1,0 +1,49 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-right: 30px;
+  width: 100px;
+}
+
+.input {
+  flex-grow: 1;
+  margin-right: 15px;
+  height: 39px;
+  min-width: 75px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 2px solid var(--grey-88);
+  border-radius: 10px;
+  background-color: var(--grey-66);
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus-visible {
+  border-color: var(--accent);
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    border-color: var(--accent);
+  }
+}
+
+@media (max-width: 450px) {
+  .input {
+    height: auto;
+  }
+  .btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}

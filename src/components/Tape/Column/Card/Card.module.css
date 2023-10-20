@@ -1,0 +1,39 @@
+.item {
+  position: relative;
+  display: block;
+  padding: 5px;
+  border-radius: 10px;
+  width: 210px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media (max-width: 450px) {
+  .item {
+    width: 100px;
+  }
+  .actions button:first-child {
+    display: none;
+  }
+  .actions button:nth-child(2) svg {
+    width: 15px;
+    height: 15px;
+  }
+}

@@ -1,0 +1,24 @@
+@import url('./normalize.css');
+@import url('./fonts.css');
+@import url('./variables.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--black);
+}
+
+#alert-root {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}

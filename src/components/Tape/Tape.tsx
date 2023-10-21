@@ -32,7 +32,6 @@ export function Tape() {
   const [columns, setColumns] = useState(0);
   function adaptive() {
     const width = window.innerWidth;
-    console.log(width);
     if (width > 1290) {
       setColumns(6);
     } else if (width > 1085) {

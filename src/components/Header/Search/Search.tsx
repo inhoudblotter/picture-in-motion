@@ -3,13 +3,14 @@ import {EIcon, Icon, Input} from 'src/shared/ui';
 import {Suggest} from './Suggest';
 import styles from './Search.module.css';
 import {getAutocomplete} from 'src/shared/api';
-import {useNavigate} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 
 export function Search() {
   const [value, setValue] = useState('');
   const [suggestItems, setSuggestItems] = useState([]);
   const timeout = useRef<NodeJS.Timeout | null>(null);
   const nav = useNavigate();
+  const location = useLocation();
 
   function onChange(e: React.ChangeEvent<HTMLInputElement>) {
     const v = e.target.value;
@@ -36,7 +37,13 @@ export function Search() {
   }
 
   return (
-    <form className={styles.container} onSubmit={onSubmit}>
+    <form
+      className={[
+        styles.container,
+        location.pathname === '/likes' ? styles.hidden : undefined,
+      ].join(' ')}
+      onSubmit={onSubmit}
+    >
       <Input className={styles.input} value={value} onChange={onChange} type="search" />
       <button className={styles.btn} type="submit" aria-label="Поиск">
         <Icon name={EIcon.search} className={styles.icon} />

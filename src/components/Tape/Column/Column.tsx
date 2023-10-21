@@ -3,6 +3,7 @@ import {IGifObject} from 'src/shared/types';
 import styles from './Column.module.css';
 import {Card} from './Card';
 import {useAppSelector} from 'src/shared/model';
+import {useLocation} from 'react-router-dom';
 
 interface IColumn extends HTMLAttributes<HTMLDivElement> {
   items: IGifObject[];

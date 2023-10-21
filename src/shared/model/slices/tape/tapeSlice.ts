@@ -33,7 +33,6 @@ export const tapeSlice = createSlice({
       state,
       action: PayloadAction<{type: 'search'; query: string} | 'trending' | 'likes'>
     ) => {
-      console.log(action.payload);
       state.items = [];
       state.loading = false;
       state.isEnd = false;
